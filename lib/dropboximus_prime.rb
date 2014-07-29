@@ -23,7 +23,6 @@ class DropboximusPrime
 
   def get_item simple_path
     filepath = proper_path(simple_path)
-    puts filepath
 
     return false unless File.exist?(filepath)
 
