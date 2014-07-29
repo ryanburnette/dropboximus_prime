@@ -25,6 +25,12 @@ Issues
 
 Feel free to report issues and make pull requests.
 
+Version History
+---------------
+
++ 0.1.0
+  + Initial version
+
 License
 -------
 
