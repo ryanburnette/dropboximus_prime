@@ -10,7 +10,7 @@ class DropboximusPrime
   attr_accessor :settings
 
   def initialize settings=false
-    @settings = !settings ? YAML.load_file('config/drizzle_settings.yml') : settings
+    @settings = !settings ? YAML.load_file('config/dropboximus_prime_settings.yml.yml') : settings
     @dropbox = DropboxClient.new(@settings['dropbox']['access_token'])
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML, autolink: true, tables: true)
   end

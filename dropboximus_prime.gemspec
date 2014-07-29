@@ -1,5 +1,5 @@
 Gem::Specification.new do |s|
-  s.name        = 'Dropboximus Prime'
+  s.name        = 'dropboximus_prime'
   s.version     = '0.1.0'
   s.date        = '2014-07-28'
   s.summary     = "Dropboximus Prime is a content cacher and processor written for Dropbox in Ruby."
