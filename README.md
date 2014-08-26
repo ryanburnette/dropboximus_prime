@@ -15,13 +15,6 @@ Supported Formats
 + YAML
 + Images
 
-Future Development
-------------------
-
-+ Documentation
-+ Globbing
-+ Rake tasks
-
 Issues
 ------
 
@@ -29,6 +22,12 @@ Feel free to report issues and make pull requests.
 
 Version History
 ---------------
+
++ 0.2.0
+  + New usage pattern
+  + Compare remote instead of cache timeouts
+  + Globbing
+  + Other improvements
 
 + 0.1.3
 

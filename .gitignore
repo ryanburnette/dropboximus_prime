@@ -1,6 +1,5 @@
+.DS_Store
 *.gem
 .vagrant
-cache
-public
-tmp
 config
+dropboximus_prime
