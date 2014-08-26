@@ -66,6 +66,42 @@ mkdir -p dropboximus_prime/rev/cache
 It's assume that you'll configure your web server to access the cache path. It's
 also suggested that you deny requests to files that start with an underscore.
 
+Usage
+-----
+
+It's assume that you'll use from your models, but you could use it right from
+your views as well.
+
+```ruby
+# model.rb
+d = DropboximusPrime.new
+
+# Markdown becomes HTML
+content = d.get 'pages/home/_content.md'
+
+# YAML becomes Array/Hash
+list = d.get 'pages/home/_list.yml'
+
+# Images have helpful methods for creating slideshows
+images = d.get 'pages/home/images/*'
+```
+
+```html
+<!-- view.erb -->
+
+<div class="content"><%= content %></div>
+
+<ul>
+  <% list.each do |item| %>
+  <li><%= item %></li>
+  <% end %>
+</ul>
+
+<% images.each do |image| %>
+<img src="<%= image.src %>" alt="<%= image.alt %>" data-thumbnail="<%= image.thumbnail_l_src %>">
+<% end %>
+```
+
 Issues
 ------
 
