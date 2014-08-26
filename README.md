@@ -24,6 +24,48 @@ Supported Formats
 + YAML
 + Images
 
+Installation
+------------
+
+Install or bundle the gem and include in your app.
+
+```bash
+gem install dropboximus_prime
+```
+
+```ruby
+# app.rb
+include 'dropboximus_prime'
+```
+
+Make sure a `dropboximus_prime.yml` file exists in your `config` directory.
+
+```yaml
+dropbox:
+  access_token: abc123
+  path: /apps/mysite.com
+cache:
+  path: dropboximus_prime/cache
+  http_prefix: /cache/
+tmp_cache:
+  path: dropboximus_prime/tmp/cache
+rev_cache:
+  path: dropboximus_prime/rev/cache
+```
+
+You can get an access token by registering a Dropbox app with your developer account.
+
+Make sure the folders you've specified in your config exist in your App's root.
+
+```bash
+mkdir -p dropboximus_prime/cache
+mkdir -p dropboximus_prime/tmp/cache
+mkdir -p dropboximus_prime/rev/cache
+```
+
+It's assume that you'll configure your web server to access the cache path. It's
+also suggested that you deny requests to files that start with an underscore.
+
 Issues
 ------
 
