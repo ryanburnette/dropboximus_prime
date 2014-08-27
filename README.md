@@ -110,6 +110,9 @@ Feel free to report issues and make pull requests.
 Version History
 ---------------
 
++ 0.2.1
+  + Make util methods private
+
 + 0.2.0
   + New usage pattern
   + Compare remote instead of cache timeouts

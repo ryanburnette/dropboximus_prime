@@ -65,7 +65,7 @@ class DropboximusPrime
     }
   end
 
-  #private
+  private
 
     def aggregate_paths items
       items.flatten.each_with_object([]) { |x, memo|
