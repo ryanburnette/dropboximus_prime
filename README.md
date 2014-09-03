@@ -110,6 +110,10 @@ Feel free to report issues and make pull requests.
 Version History
 ---------------
 
++ 0.2.4
+  + Get now returns certain format as raw, others with the public URL
+  + Anything else returns nil
+
 + 0.2.3
   + Images no longer return bad path info
 
