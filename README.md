@@ -110,6 +110,9 @@ Feel free to report issues and make pull requests.
 Version History
 ---------------
 
++ 0.2.2
+  + If not a known format, return file contents when using get method
+
 + 0.2.1
   + Make util methods private
 

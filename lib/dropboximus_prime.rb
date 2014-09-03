@@ -79,6 +79,7 @@ class DropboximusPrime
       return YAML.load_file(path) if is_yaml?(path)
       return @markdown.render(File.read(path)) if is_markdown?(path)
       return imagify(path) if is_image?(path)
+      return File.read(path)
     end
 
     DPImage = Struct.new(:url, :title, :alt, :thumbnail_s_url, :thumbnail_m_url, :thumbnail_l_url, :thumbnail_xl_url)
