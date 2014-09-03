@@ -83,8 +83,9 @@ class DropboximusPrime
     end
 
     DPImage = Struct.new(:url, :title, :alt, :thumbnail_s_url, :thumbnail_m_url, :thumbnail_l_url, :thumbnail_xl_url)
-    def imagify relative_path
-      url = public_path(relative_path)
+    def imagify local_path
+      relative_path = local_path_to_relative_path local_path
+      url = public_path relative_path
 
       meta = get_image_meta(relative_path)
       alt = meta[0]
@@ -104,7 +105,7 @@ class DropboximusPrime
 
     def get_image_meta relative_path
       begin
-        cache_path = cache_path(relative_path)
+        cache_path = cache_path relative_path
         meta_file_path = File.join(File.dirname(cache_path), '_'+File.basename(cache_path,".*")+'.yml')
         meta = YAML.load_file(meta_file_path)
         [
@@ -135,6 +136,12 @@ class DropboximusPrime
 
     def remote_path_to_relative_path remote_path
       new_path = remote_path.sub(@settings['dropbox']['path'], '')
+      new_path[0] = '' if new_path[0] == '/'
+      new_path
+    end
+
+    def local_path_to_relative_path local_path
+      new_path = local_path.sub(@settings['cache']['path'], '')
       new_path[0] = '' if new_path[0] == '/'
       new_path
     end

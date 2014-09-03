@@ -110,6 +110,9 @@ Feel free to report issues and make pull requests.
 Version History
 ---------------
 
++ 0.2.3
+  + Images no longer return bad path info
+
 + 0.2.2
   + If not a known format, return file contents when using get method
 
